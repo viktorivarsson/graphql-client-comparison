@@ -1,0 +1,4 @@
+{
+  "28c6a97792542a206f28bc22337733cd": "query UserQuery(\n  $userId: ID!\n) {\n  viewer {\n    user(id: $userId) {\n      id\n      name\n      age\n    }\n    id\n  }\n}\n",
+  "61efda31c58743db74b7b3215c4a345a": "query HomeQuery {\n  viewer {\n    ...UserList_viewer\n    id\n  }\n}\n\nfragment UserList_viewer on Viewer {\n  users {\n    id\n    name\n  }\n}\n"
+}

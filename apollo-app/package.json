@@ -1,0 +1,28 @@
+{
+  "name": "apollo-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "yarn ts:generate && vite",
+    "ts:generate": "apollo client:codegen --target=typescript --localSchemaFile=schema.graphql",
+    "build": "yarn run ts:generate && tsc && vite build",
+    "serve": "vite preview",
+    "schema:download": "apollo client:download-schema --endpoint=http://localhost:4000/graphql schema.graphql"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.3.1",
+    "@vitejs/plugin-react": "^1.0.0",
+    "apollo": "^2.33.6",
+    "graphql": "^15.6.1",
+    "prettier": "^2.4.1",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.0"
+  }
+}
